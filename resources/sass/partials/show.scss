@@ -1,15 +1,17 @@
 .details {
     width: 1200px;
     .show-img {
+        position: relative;
         margin: 0;
         width: 20%;
         img {
-        max-width: 100%;
+        width: 100%;
         }
     }
     .show-text {
         width: 80%;
         margin: 0;
-        padding-left: 50px;
+        padding-left: 50px;   
     }
 }
+

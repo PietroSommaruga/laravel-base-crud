@@ -8,9 +8,10 @@
               <div class="comic-card my-3">
                   <div class="card-img">
                     <a href="{{route('comics.show', $value->id)}}"> <img src="{{$value['thumb']}}" alt=""> </a>
+                    <strong class="type px-3 py-1">{{$value['type']}}</strong>
                   </div>
                 
-                <div class="text py-2">{{$value['series']}}</div>
+                <strong class="text py-3">{{$value['series']}}</strong>
               </div>
             @endforeach
         </div>

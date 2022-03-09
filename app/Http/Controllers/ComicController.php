@@ -7,30 +7,12 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
-
     public function index()
     {
-        $infoMenu = [
-            [
-                'text' => 'digital comics'
-            ],
-            [
-                'text' => 'dc merchandise'
-            ],
-            [
-                'text' => 'subscription'
-            ],
-            [
-                'text' => 'comic shop locator'
-            ],
-            [
-                'text' => 'dc power visa'
-            ],
-        ];
 
         $comics = Comic::all();
 
-        return view('comics.index', compact('comics', 'infoMenu'));
+        return view('comics.index', compact('comics'));
     }
 
     public function create()
@@ -43,7 +25,7 @@ class ComicController extends Controller
         $comic = $request->all();
         $newComic = Comic::create($comic);
 
-/*        $newComic = new Comic();
+/*      $newComic = new Comic();
         $newComic->title = $comic['title'];
         $newComic->series = $comic['series'];
         $newComic->type = $comic['type'];

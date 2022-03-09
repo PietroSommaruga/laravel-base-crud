@@ -2,7 +2,7 @@
             <div class="bg-primary"></div>
               <nav class="d-flex align-items-center justify-content-between">
                   
-                      <a href="/"><img src="../img/dc-logo.png" alt=""></a>
+                      <a href="{{ route('comics.index') }}"><img src="../img/dc-logo.png" alt=""></a>
                     
                   <ul class="d-flex ">
                       <li><a href="{{ route('home') }}">HOME</li></a>
