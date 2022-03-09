@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.default')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index</title>
-</head>
 
-<body>
-<div class="comic-card btn-main-s">
-        <div class="card-img">
-          <a href="{{ route(comics.show, $comic->id) }}" class="btn btn-link"><img src="{{$comic['thumb']}}" alt=""></a>            
+    <main>
+        <div class="card-container d-flex flex-wrap justify-content-between">
+            @foreach ($comics as $value)
+              <div class="comic-card my-3">
+                  <div class="card-img">
+                    <a href="{{route('comics.show', $value->id)}}"> <img src="{{$value['thumb']}}" alt=""> </a>
+                  </div>
+                
+                <div class="text py-2">{{$value['series']}}</div>
+              </div>
+            @endforeach
         </div>
-          
-        <div class="title">{{$comic['series']}}</div>
-      </div>
-</body>
+    </main>
 
-</html>
+    
+@endsection
