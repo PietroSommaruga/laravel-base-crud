@@ -1,4 +1,6 @@
 @extends('layouts.default')
 @section('content')
-<a href="/comics"><h1 class="text-center">VEDI FUMETTI</h1></a>
+<div class="text-center">
+    <a href="/comics" class="btn btn-primary p-3 my-4">VEDI FUMETTI</a>
+</div>
 @endsection
